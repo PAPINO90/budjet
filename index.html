@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion du Budget</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+    <style>
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .container {
+            width: 200%;
+            max-width: 1230px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .title-big {
+            font-size: 60px;
+            font-weight: bold;
+            color: #004d40; 
+            display: inline-block;
+        }
+
+        .title-small {
+            font-size: 40px;
+            font-weight: bold;
+            color: #FFD700; 
+            display: inline-block;
+            margin-left: -8px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #004d40;
+            margin-top: -10px;
+        }
+
+        
+        .summary {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: #004d40;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .card-value {
+            font-size: 20px;
+            color: #333;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        
+        .expense-list {
+            margin-top: 20px;
+        }
+
+        .list-title {
+            font-size: 18px;
+            color: #FFD700;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #004d40;
+            color: white;
+        }
+
+        .btn-delete {
+            background: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-add {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            color: #FFD700;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        .btn-add i {
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 8px;
+            display: inline-block;
+            color: #FFD700;
+            border-radius: 50%;
+            border: 2px solid #FFD700;
+            width: 20px;
+            height: 20px;
+            line-height: 16px;
+            text-align: center;
+        }
+    </style>
+
+<body>
+    <div class="container">
+        
+        <div class="title">
+            <span class="title-big">B</span>
+            <span class="title-small">UDGET</span>
+            <div class="subtitle">Gestion du budget</div>
+        </div>
+
+        
+        <div class="summary">
+            <div class="card">
+                <div class="card-header">Budget</div>
+                <div class="card-value" id="budget">120.000F CFA</div>
+            </div>
+            <div class="card">
+                <div class="card-header">Dépenses</div>
+                <div class="card-value" id="expenses">100.000F CFA</div>
+            </div>
+            <div class="card">
+                <div class="card-header">Solde</div>
+                <div class="card-value" id="balance">20.000F CFA</div>
+            </div>
+        </div>
+
+        
+        <div class="expense-list">
+            <div class="list-title">Liste des dépenses</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>TITRE</th>
+                        <th>MONTANT</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody id="expenseTable">
+                    <tr>
+                        <td>Nourriture</td>
+                        <td>40.000F CFA</td>
+                        <td><button class="btn-delete" onclick="deleteExpense(this)">Supprimer</button></td>
+                    </tr>
+                    <tr>
+                        <td>Loyer</td>
+                        <td>30.000F CFA</td>
+                        <td><button class="btn-delete" onclick="deleteExpense(this)">Supprimer</button></td>
+                    </tr>
+                    <tr>
+                        <td>Transport</td>
+                        <td>10.000F CFA</td>
+                        <td><button class="btn-delete" onclick="deleteExpense(this)">Supprimer</button></td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <button class="btn-add" onclick="window.location.href='ajouter-depense.html'">AJOUTER DÉPENSE<i>+</i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>	
+    
+</body>
+</html>
+
+
+
+

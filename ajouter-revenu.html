@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter Revenu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+
+html, body {
+            padding: 0;
+            width: 100%;     
+        }
+
+        .container {
+          max-width: 1200px;
+            margin: auto;
+           background: white;   
+        }
+
+        
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .title-big {
+            font-size: 60px;
+            font-weight: bold;
+            color: #004d40; 
+            display: inline-block;
+        }
+
+        .title-small {
+            font-size: 40px;
+            font-weight: bold;
+            color: 
+            #FFD700; 
+            display: inline-block;
+            margin-left: -8px;
+        }
+
+        h2{
+            padding: 40px;
+            padding-top: 100px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #004d40;
+            margin-top: -10px;
+        }
+
+       
+        
+             body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: left;
+            width: 30%;
+            height: 80vh;
+            background-color: #ffffff;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #004d40;
+        }
+
+       
+
+        
+
+        input, button { width: 100%; 
+        padding: 10px; 
+        margin: 10px 0;
+         border: 1px solid #ddd;
+          border-radius: 5px; }
+
+          button { background: hsl(170, 100%, 15%); 
+        color: white; 
+        border: none; 
+        font-weight: bold;
+        margin: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;     
+    }
+
+      
+
+
+       
+</style>
+
+<body>
+    <div class="container">
+        
+        <div class="title">
+            <span class="title-big">B</span>
+            <span class="title-small">UDGET</span>
+            <div class="subtitle">Gestion du budget</div>
+            <div>
+                <h2>AJOUTER REVENU</h2>
+            </div>
+        </div>
+
+        
+        <form id="revenueForm">
+            <label for="revenueTitle">TITRE</label>
+            <input type="text" id="revenueTitle" placeholder="Ex : Salaire" required>
+            <label for="revenueAmount">MONTANT</label>
+            <input type="number" id="revenueAmount" placeholder="Ex : 50000" required>
+            <button type="submit" onclick="window.location.href='index.html'">VALIDER</button>
+            
+
+            <script src="script.js"></script>
+        </form>
+    </div>
+
+    
+</body>
+</html>
